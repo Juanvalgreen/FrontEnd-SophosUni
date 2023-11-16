@@ -43,7 +43,7 @@ export class CoursesService {
 
   addNewCourse(course: courseRequest): Observable<any>{
 
-    console.log(course);
+
     return this.httpClient.post(`${environment.apiBaseUrl}/courses`,course,{headers: this.headers, responseType: 'text'});
 
   }

@@ -16,7 +16,6 @@ export class LoginService {
 //
 
   login (credentials: LoginRequest): Observable<any>{
-    console.log(credentials);
     return this.httpClient.post(`${environment.apiBaseUrl}/user/login`,credentials);
   }
 

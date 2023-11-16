@@ -37,11 +37,11 @@ export class LoginComponent {
 
 
   login(){
-    //console.log(this.loginForm.value);
+
     if(this.loginForm.valid){
 
       this.authService.login(this.loginForm.value as LoginRequest).subscribe(data => {
-        console.log(data);
+
 
 
         if(data == null || data.token == null){
