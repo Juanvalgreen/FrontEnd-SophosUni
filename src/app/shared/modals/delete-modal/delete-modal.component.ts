@@ -15,6 +15,8 @@ import { TeachersService } from 'src/app/services/teachers/teachers.service';
 })
 export class DeleteModalComponent {
 
+  isError: boolean = false;
+
   loading: boolean = false;
 
   isAvailable: boolean = true;
@@ -60,6 +62,7 @@ export class DeleteModalComponent {
             this.router.navigateByUrl('/list');
             this.modalService.toggleDeleteModal();
           },error => {
+            this.isError = true;
             console.log(error);
           }
         );
@@ -72,6 +75,8 @@ export class DeleteModalComponent {
             this.router.navigateByUrl('/list');
             this.modalService.toggleDeleteModal();
           },error => {
+            this.isError = true;
+
             console.log(error);
           }
         );
@@ -84,6 +89,8 @@ export class DeleteModalComponent {
             this.router.navigateByUrl('/list');
             this.modalService.toggleDeleteModal();
           },error => {
+            this.isError = true;
+
             console.log(error);
           }
         );

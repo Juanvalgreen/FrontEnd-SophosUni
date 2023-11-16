@@ -21,6 +21,8 @@ import { TeachersService } from 'src/app/services/teachers/teachers.service';
 })
 export class EditModalComponent {
 
+  isError: boolean = false;
+
   loading: boolean = false;
 
   allTeachers: teachers[] = [];
@@ -71,6 +73,7 @@ export class EditModalComponent {
           this.allStudents = data;
         },
         error => {
+          this.isError =true;
           console.log(error);
       });
 
@@ -79,6 +82,8 @@ export class EditModalComponent {
           this.allTeachers = data;
         },
         error => {
+          this.isError =true;
+
           console.log(error);
       });
     }
@@ -125,6 +130,8 @@ export class EditModalComponent {
               this.modalService.toggleEditModal();
 
             }, error => {
+              this.isError =true;
+
               console.log(error);
             }
           );
@@ -154,6 +161,7 @@ export class EditModalComponent {
               this.modalService.toggleEditModal();
 
             }, error => {
+              this.isError =true;
               console.log(error);
             }
           );
@@ -181,6 +189,7 @@ export class EditModalComponent {
               this.modalService.toggleEditModal();
 
             }, error => {
+              this.isError =true;
               console.log(error);
             }
           );

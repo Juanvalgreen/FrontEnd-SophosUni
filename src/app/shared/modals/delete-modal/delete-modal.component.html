@@ -8,7 +8,9 @@
     <div class="modal-info">
       <p>Esta acción es irreversible y eliminara por completo a {{currentDetailName}}</p>
       <app-loader *ngIf="loading"></app-loader>
-      <div class="buttons-container"  *ngIf="!loading">
+      <p class="error_message" *ngIf="isError" >Ha ocurrido un error en el servidor, no ha sido posible realizarlo</p>
+
+      <div class="buttons-container"  *ngIf="!loading && !isError">
         <button (click)="closeModal()">Cancelar</button>
         <button id="delete-button" (click)="confirmDelete()">Eliminar</button>
 

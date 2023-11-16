@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { ApprovedCourse } from 'src/app/models/approvedCourse.model';
 import { ApprovedCoursesService } from 'src/app/services/approved-courses/approved-courses.service';
 import { DetailsDataService } from 'src/app/services/details-data/details-data.service';
+import { LoadingService } from 'src/app/services/loading/loading.service';
 
 @Component({
   selector: 'app-approved-courses-list',
@@ -10,13 +11,14 @@ import { DetailsDataService } from 'src/app/services/details-data/details-data.s
 })
 export class ApprovedCoursesListComponent {
 
+  loading: boolean = false;
 
   approvedCourses: ApprovedCourse[];
 
   isError: boolean = false;
 
 
-  constructor(private approvedService :ApprovedCoursesService, private detailService: DetailsDataService ){
+  constructor(private loadingService: LoadingService, private approvedService :ApprovedCoursesService, private detailService: DetailsDataService ){
 
     this.approvedCourses = [];
 
@@ -25,7 +27,9 @@ export class ApprovedCoursesListComponent {
 
 
   ngOnInit(){
-    // student: students = null;
+
+
+    this.loadingService.loading$.subscribe(loading => this.loading = loading);
 
     this.approvedService.getAllEnrollmentsByStudentId(this.detailService.detailsData.currentData.student_id).subscribe(
       data => {
