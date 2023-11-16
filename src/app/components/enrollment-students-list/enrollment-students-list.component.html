@@ -2,9 +2,9 @@
   <div class="header">
     <h1 class="title" > Estudiantes matriculados</h1>
     <img src="../../../assets/plus.svg" alt="add new enroll icon" (click)="openAddNewEnrollModal()">
+    <app-loader *ngIf="loading"></app-loader>
   </div>
-  <p class="empty_courses" *ngIf="(enrollmentStudents.length == 0)">Este curso aún no tiene estudiantes matriculados</p>
-  <app-loader *ngIf="loading"></app-loader>
+  <p class="empty_courses" *ngIf="(enrollmentStudents.length == 0)" && !loading>Este curso aún no tiene estudiantes matriculados</p>
   <table class="table-list" *ngIf="!(enrollmentStudents.length == 0) && !loading">
     <tr >
       <th>
