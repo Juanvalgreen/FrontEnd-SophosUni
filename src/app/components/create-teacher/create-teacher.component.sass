@@ -1,0 +1,78 @@
+@use '../../_base.sass'
+
+
+.main-wrapper
+  @include base.main-wraper-component
+  height: 100%
+  position: relative
+
+  .header
+    padding-top: 1.2rem
+    position: sticky
+    top: 0
+    background-color: base.$secondary-color
+    display: flex
+    justify-content: space-between
+    h1
+      color: base.$primary-color
+      font-size: 2rem
+      font-weight: 500
+      margin: 0
+
+
+
+  .create_teacher_form
+
+    display: flex
+
+
+    .column-form
+      margin: 0 2rem
+      width: 100%
+
+
+    .input-group
+      display: flex
+      flex-direction: column
+      margin: 2rem 0
+
+      input
+        @include base.input
+
+      label
+        color: base.$text-color
+        font-size: 1.4rem
+
+      select
+        @include base.input
+        width: 100%
+        padding: 0 1rem
+
+
+
+    button
+      @include base.button
+      width: 20%
+      position: absolute
+      bottom: 0
+      right: 3rem
+      cursor: pointer
+      background-color: base.$primary-color
+
+      transition: all 0.5s
+      &:hover
+        width: 22%
+        font-size: 1.2rem
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px
+    .disabled-button
+      @include base.button
+      width: 20%
+      background-color: gray
+      pointer-events: none // Evita que se active el hover
+      cursor: not-allowed
+
+  .error_message
+      color: red
+      margin: 5rem
+      font-size: 1rem
+

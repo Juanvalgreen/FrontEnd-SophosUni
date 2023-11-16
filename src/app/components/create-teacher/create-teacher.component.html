@@ -1,0 +1,34 @@
+<div class="main-wrapper">
+  <div class="header">
+    <h1>Crear nuevo</h1>
+  </div>
+
+  <!-- teacher_id: number
+  teacher_full_name: string
+  max_degree: string
+  experience_years: number -->
+  <form class="create_teacher_form" [formGroup]="createTeacherForm">
+    <div class="column-form">
+      <div class="input-group">
+        <label>Nombre</label>
+        <input formControlName="teacher_full_name" type="text" >
+      </div>
+      <div class="input-group">
+        <label>Grado educación</label>
+        <input formControlName="max_degree"  type="text" >
+      </div>
+      <div class="input-group">
+        <label>Años experiencia</label>
+        <input formControlName="experience_years"  type="number" min="0">
+      </div>
+
+    </div>
+
+    <button *ngIf="!isError && !loading" (click)="onSubmit()" [class.disabled-button]="!createTeacherForm.valid" class="submit-button">Confirmar</button>
+  </form>
+
+  <app-loader *ngIf="loading"></app-loader>
+  <p *ngIf="isError" class="error_message">Ha ocurrido un error al conectarse con el servidor, intentelo nuevamente más tarde</p>
+
+</div>
+

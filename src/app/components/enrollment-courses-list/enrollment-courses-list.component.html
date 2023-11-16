@@ -1,0 +1,38 @@
+<div class="main-wrapper">
+  <div class="header">
+    <h1 class="title" > Cursos matriculados</h1>
+    <img src="../../../assets/plus.svg" alt="add new enroll icon" (click)="openAddNewEnrollModal()">
+  </div>
+  <p class="empty_courses" *ngIf="(enrollmentCourses.length == 0) && !isError && !loading">Este estudiante aún no tiene cursos matriculados</p>
+
+  <app-loader *ngIf="loading"></app-loader>
+  <p *ngIf="isError" class="error_message">Ha ocurrido un error al traer los datos, intentelo nuevamente más tarde</p>
+
+  <table class="table-list" *ngIf="!(enrollmentCourses.length == 0) && !isError && !loading">
+    <tr >
+      <th>
+        Codigo
+      </th>
+      <th>
+        Nombre
+      </th>
+      <th>
+        Profesor
+      </th>
+    </tr>
+    <tr *ngFor="let course of enrollmentCourses">
+      <td>
+        {{course.course_id}}
+      </td>
+      <td>
+        {{course.course_details.course_name}}
+      </td>
+      <td >
+        {{course.course_details.teacher_details == null ? 'Null' : course.course_details.teacher_details.teacher_full_name}}
+      </td>
+
+      <img src="../../../assets/borrar 1.svg" alt="delete enroll logo" class="delete-enroll" (click)="openDeleteEnrollModal(course)">
+    </tr>
+  </table>
+
+</div>

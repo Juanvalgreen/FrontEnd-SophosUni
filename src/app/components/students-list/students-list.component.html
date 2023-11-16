@@ -1,0 +1,58 @@
+<div class="main-wrapper">
+  <div class="header">
+    <h1 class="title"  *ngIf="!isStudentsPage" (click)="redirectToList()">Estudiantes</h1>
+    <h1 *ngIf="isStudentsPage">Listado</h1>
+    <form class="search-bar-container" *ngIf="isStudentsPage" [formGroup]="searchBar">
+      <img class="search-bar-icon" src="../../../assets/lupa.svg">
+      <input formControlName="search" type="text" class="search-bar-input" placeholder="Busca el nombre del estudiante">
+    </form>
+    <app-loader *ngIf="loading"></app-loader>
+  </div>
+  <p *ngIf="isError" class="error_message">Ha ocurrido un error al traer los datos, intentelo nuevamente más tarde</p>
+  <table class="table-list" *ngIf="!isError && !loading">
+    <tr >
+      <th>
+        Codigo
+        <img src="../../../assets/ordenar 5.svg" alt="sort logo" (click)="sortStudents('student_id')">
+      </th>
+      <th>
+        Nombre
+        <img src="../../../assets/ordenar 5.svg" alt="sort logo" (click)="sortStudents('student_full_name')">
+      </th>
+      <th *ngIf="isStudentsPage">
+        Correo
+      </th>
+      <th *ngIf="isStudentsPage">
+        Teléfono
+      </th>
+      <th *ngIf="isStudentsPage">
+        Creditos matriculados
+      </th>
+      <th>
+        Facultad
+        <img src="../../../assets/ordenar 5.svg" alt="sort logo" (click)="sortStudents('faculty')">
+      </th>
+    </tr>
+    <tr  *ngFor="let student of currentStudentList">
+      <td>
+        {{student.student_id}}
+      </td>
+      <td (click)="asignDetailData(student)" id="clickableName">
+        {{student.student_full_name}}
+      </td>
+      <td *ngIf="isStudentsPage">
+        {{student.student_email != null ? student.student_email : 'Null'}}
+      </td>
+      <td *ngIf="isStudentsPage">
+        {{student.student_phone != null ? student.student_phone : 'Null'}}
+      </td>
+      <td *ngIf="isStudentsPage">
+        {{student.enrolled_credits}}
+      </td>
+      <td>
+        {{student.faculty}}
+      </td>
+    </tr>
+  </table>
+
+</div>

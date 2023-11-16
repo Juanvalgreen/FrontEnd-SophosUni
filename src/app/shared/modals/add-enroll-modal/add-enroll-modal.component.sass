@@ -1,0 +1,110 @@
+@use '../../../_base'
+
+
+.modal-main
+  @include base.modal-main
+  justify-content: center
+  align-items: center
+
+  .modal-container
+    margin: 7rem 6rem
+    display: flex
+    flex-direction: column
+
+  .modal-header
+    height: 2rem
+    padding: 1.2rem
+    display: flex
+    align-items: center
+    justify-content: space-between
+    background-color: base.$secondary-color
+    border-radius: 8px 8px 0 0
+
+    img
+      width: 1.5rem
+      cursor: pointer
+      transition: 0.4s
+
+      &:hover
+        transform: scale(1.2)
+
+    h1
+      font-size: 1.5rem
+      color: base.$primary-color
+
+
+  .modal-info
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    height: 100%
+    padding: 0 2rem
+    margin: 0
+    background-color: white
+    border-radius: 0 0 8px 8px
+
+    p
+      margin: 1rem 0
+      color: base.$text-color
+
+
+
+
+    .buttons-container
+      width: 100%
+      display: flex
+      justify-content: space-around
+
+
+    button
+      @include base.button
+      margin: 1rem 0
+      background-color: base.$primary-color
+      color: white
+      padding: 0 1rem
+      cursor: pointer
+      transition: 0.4s
+
+      &:hover
+        transform: scale(1.1)
+
+    #delete-button
+      background-color: base.$warning-color
+
+    .error_message
+      text-align: center
+      color: red
+      margin: 0
+      width: 28rem
+      font-size: 1rem
+
+  .edit_form
+    display: flex
+    justify-content: space-between
+    width: 28rem
+
+
+
+
+
+    .input-group
+      display: flex
+      flex-direction: column
+      justify-content: ce
+      margin: 2rem 0
+
+
+
+      label
+        color: base.$text-color
+        font-size: 1.2rem
+        font-weight: 200
+
+      select
+        @include base.input
+        width: 12rem
+        padding: 0 1rem
+
+
+

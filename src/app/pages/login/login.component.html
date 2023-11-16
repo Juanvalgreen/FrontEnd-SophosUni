@@ -1,0 +1,36 @@
+<main >
+
+  <div class="illustration-side">
+
+    <img class="logo" src="../../../assets/Logo.svg" alt="Sophos university logo">
+    <img class="illustration" src="../../../assets/VEctorIllustracion.svg" alt="academic Illustration">
+
+  </div>
+  <aside class="form-side">
+
+    <h2>Bienvenido</h2>
+    <p>Ingresa tus credenciales</p>
+
+    <form class="login_form" [formGroup]="loginForm">
+      <div>
+        <img src="../../../assets/email 1.svg" alt="Email logo">
+        <input formControlName="user_mail" placeholder="Email" type="email" class="input_email" (change)="isRegister = true">
+      </div>
+      <div>
+        <img src="../../../assets/bloquear 1.svg" alt="Email logo">
+        <input formControlName="user_password" placeholder="Contraseña" type="password" class="input_password">
+      </div>
+
+      <p *ngIf="!isRegister" class="error_message">Credenciales incorrectas</p>
+      <p *ngIf="errorResponse" class="error_message">Error del servidor, Intenta acceder más tarde</p>
+
+      <button *ngIf="!loading" (click)="login()" [class.disabled-button]="!loginForm.valid" [class.submit-button]="loginForm.valid" type="submit" class="submit-button">Confirmar</button>
+      <app-loader *ngIf="loading"></app-loader>
+    </form>
+
+
+
+
+  </aside>
+
+</main>

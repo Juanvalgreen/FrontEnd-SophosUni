@@ -1,0 +1,72 @@
+[
+  {
+      "history_courses_id": 90003,
+      "student_id": 30003,
+      "student_details": {
+          "student_id": 30003,
+          "student_full_name": "Javier Martínez",
+          "faculty": "Ingeniería",
+          "available_credits": 15,
+          "enrolled_credits": 3,
+          "student_email": "nezvija28@gmail.com",
+          "student_phone": "3007582121"
+      },
+      "course_id": 70000,
+      "course_details": {
+          "course_id": 70000,
+          "teacher_details": {
+              "teacher_id": 50003,
+              "teacher_full_name": "Beatriz Sánchez",
+              "max_degree": "Maestría",
+              "experience_years": 6
+          },
+          "course_name": "Matemáticas",
+          "amount_credits": 3,
+          "available_places": 30,
+          "student_monitor_details": {
+              "student_id": 30003,
+              "student_full_name": "Javier Martínez",
+              "faculty": "Ingeniería",
+              "available_credits": 15,
+              "enrolled_credits": 3,
+              "student_email": "nezvija28@gmail.com",
+              "student_phone": "3007582121"
+          }
+      }
+  },
+  {
+    "history_courses_id": 90003,
+    "student_id": 30003,
+    "student_details": {
+        "student_id": 30003,
+        "student_full_name": "Javier Martínez",
+        "faculty": "Ingeniería",
+        "available_credits": 15,
+        "enrolled_credits": 3,
+        "student_email": "nezvija28@gmail.com",
+        "student_phone": "3007582121"
+    },
+    "course_id": 70000,
+    "course_details": {
+        "course_id": 70000,
+        "teacher_details": {
+            "teacher_id": 50003,
+            "teacher_full_name": "Beatriz Sánchez",
+            "max_degree": "Maestría",
+            "experience_years": 6
+        },
+        "course_name": "Matemáticas",
+        "amount_credits": 3,
+        "available_places": 30,
+        "student_monitor_details": {
+            "student_id": 30003,
+            "student_full_name": "Javier Martínez",
+            "faculty": "Ingeniería",
+            "available_credits": 15,
+            "enrolled_credits": 3,
+            "student_email": "nezvija28@gmail.com",
+            "student_phone": "3007582121"
+        }
+    }
+  }
+]

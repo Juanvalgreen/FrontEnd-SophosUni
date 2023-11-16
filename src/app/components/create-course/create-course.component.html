@@ -1,0 +1,43 @@
+<div class="main-wrapper">
+  <div class="header">
+    <h1>Crear nuevo</h1>
+  </div>
+  <form class="create_course_form" [formGroup]="createCourseForm" >
+    <div class="column-form">
+      <div class="input-group">
+        <label>Nombre</label>
+        <input formControlName="course_name" type="text" >
+      </div>
+      <div class="input-group">
+        <label>Nº creditos</label>
+        <input formControlName="amount_credits"  type="number" min="0">
+      </div>
+      <div class="input-group">
+        <label> Monitor</label>
+        <select formControlName="course_student_monitor_id">
+          <option value="null"> Null</option>
+          <option *ngFor="let student of allStudents" value={{student.student_id}}> {{student.student_full_name}}</option>
+        </select>
+      </div>
+    </div>
+    <div class="column-form">
+      <div class="input-group">
+        <label> Cupos libres </label>
+        <input formControlName="available_places"  type="number" min="0">
+      </div>
+      <div class="input-group">
+        <label> Maestro</label>
+        <select formControlName="teacher_id">
+          <option value="null">Null</option>
+          <option *ngFor="let teacher of allTeachers" value={{teacher.teacher_id}}> {{teacher.teacher_full_name}}</option>
+        </select>
+      </div>
+
+    </div>
+    <button *ngIf="!isError && !loading" (click)="onSubmit()" [class.disabled-button]="!createCourseForm.valid" class="submit-button">Confirmar</button>
+    <app-loader *ngIf="loading"></app-loader>
+  </form>
+  <p *ngIf="isError" class="error_message">Ha ocurrido un error al conectarse con el servidor, intentelo nuevamente más tarde</p>
+
+</div>
+

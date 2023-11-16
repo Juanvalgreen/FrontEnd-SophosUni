@@ -1,0 +1,51 @@
+<div class="main-wrapper">
+  <div class="header">
+    <h1 class="title"  *ngIf="!isCoursesPage" (click)="redirectToList()">Cursos</h1>
+    <h1 *ngIf="isCoursesPage" >Listado</h1>
+    <form class="search-bar-container" *ngIf="isCoursesPage" [formGroup]="searchBar">
+      <img class="search-bar-icon" src="../../../assets/lupa.svg">
+      <input formControlName="search" type="text" class="search-bar-input" placeholder="Busca el nombre del curso">
+    </form>
+    <app-loader *ngIf="loading"></app-loader>
+  </div>
+  <p *ngIf="isError" class="error_message">Ha ocurrido un error al traer los datos, intentelo nuevamente más tarde</p>
+  <table class="table-list" *ngIf="!isError && !loading">
+    <tr >
+      <th >
+        Codigo
+        <img src="../../../assets/ordenar 5.svg" alt="sort logo" (click)="sortCourses('course_id')">
+      </th>
+      <th>
+        Nombre
+        <img src="../../../assets/ordenar 5.svg" alt="sort logo" (click)="sortCourses('course_name')">
+      </th>
+      <th *ngIf="isCoursesPage">
+        Profesor
+      </th>
+      <th *ngIf="isCoursesPage">
+        Monitor
+      </th>
+      <th *ngIf="isCoursesPage">
+        Nª cupos
+      </th>
+    </tr>
+    <tr *ngFor="let course of currentCoursesList">
+      <td>
+        {{course.course_id}}
+      </td>
+      <td (click)="asignDetailData(course)" id="clickableName">
+        {{course.course_name}}
+      </td>
+      <td *ngIf="isCoursesPage">
+        {{course.teacher_details != null ? course.teacher_details.teacher_full_name : 'Null'}}
+      </td>
+      <td *ngIf="isCoursesPage">
+        {{course.student_monitor_details != null ? course.student_monitor_details.student_full_name : 'Null'}}
+      </td>
+      <td *ngIf="isCoursesPage">
+        {{course.available_places}}
+      </td>
+    </tr>
+  </table>
+
+</div>

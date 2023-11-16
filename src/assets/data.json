@@ -1,0 +1,164 @@
+[
+  {
+    "student_id": 30014,
+    "student_full_name": "Camilo Echeverry",
+    "faculty": "Ingeniería",
+    "available_credits": 12,
+    "enrolled_credits": 1,
+    "student_email": null,
+    "student_phone": null
+},
+{
+    "student_id": 30002,
+    "student_full_name": "María Rodríguez",
+    "faculty": "Ciencias",
+    "available_credits": 19,
+    "enrolled_credits": 3,
+    "student_email": "marodri@gmail.com",
+    "student_phone": "3185698754"
+},
+{
+    "student_id": 30005,
+    "student_full_name": "Julia Vargas",
+    "faculty": "Ciencias",
+    "available_credits": 17,
+    "enrolled_credits": 3,
+    "student_email": null,
+    "student_phone": "3125678227"
+},
+{
+    "student_id": 30006,
+    "student_full_name": "Elena Sánchez",
+    "faculty": "Ciencias",
+    "available_credits": 22,
+    "enrolled_credits": 6,
+    "student_email": "sanchelena@hotmail.com\n",
+    "student_phone": "3105279064"
+},
+{
+    "student_id": 30009,
+    "student_full_name": "Jorge Ramírez",
+    "faculty": "Ingeniería",
+    "available_credits": 15,
+    "enrolled_credits": 6,
+    "student_email": "Jorgeram@outlook.com\n",
+    "student_phone": null
+},
+{
+    "student_id": 30010,
+    "student_full_name": "Sofía Morales",
+    "faculty": "Ciencias",
+    "available_credits": 16,
+    "enrolled_credits": 3,
+    "student_email": null,
+    "student_phone": "3196575859"
+},
+{
+  "student_id": 30014,
+  "student_full_name": "Camilo Echeverry",
+  "faculty": "Ingeniería",
+  "available_credits": 12,
+  "enrolled_credits": 1,
+  "student_email": null,
+  "student_phone": null
+},
+{
+  "student_id": 30002,
+  "student_full_name": "María Rodríguez",
+  "faculty": "Ciencias",
+  "available_credits": 19,
+  "enrolled_credits": 3,
+  "student_email": "marodri@gmail.com",
+  "student_phone": "3185698754"
+},
+{
+  "student_id": 30005,
+  "student_full_name": "Julia Vargas",
+  "faculty": "Ciencias",
+  "available_credits": 17,
+  "enrolled_credits": 3,
+  "student_email": null,
+  "student_phone": "3125678227"
+},
+{
+  "student_id": 30006,
+  "student_full_name": "Elena Sánchez",
+  "faculty": "Ciencias",
+  "available_credits": 22,
+  "enrolled_credits": 6,
+  "student_email": "sanchelena@hotmail.com\n",
+  "student_phone": "3105279064"
+},
+{
+  "student_id": 30009,
+  "student_full_name": "Jorge Ramírez",
+  "faculty": "Ingeniería",
+  "available_credits": 15,
+  "enrolled_credits": 6,
+  "student_email": "Jorgeram@outlook.com\n",
+  "student_phone": null
+},
+{
+  "student_id": 30010,
+  "student_full_name": "Sofía Morales",
+  "faculty": "Ciencias",
+  "available_credits": 16,
+  "enrolled_credits": 3,
+  "student_email": null,
+  "student_phone": "3196575859"
+},
+{
+  "student_id": 30014,
+  "student_full_name": "Camilo Echeverry",
+  "faculty": "Ingeniería",
+  "available_credits": 12,
+  "enrolled_credits": 1,
+  "student_email": null,
+  "student_phone": null
+},
+{
+  "student_id": 30002,
+  "student_full_name": "María Rodríguez",
+  "faculty": "Ciencias",
+  "available_credits": 19,
+  "enrolled_credits": 3,
+  "student_email": "marodri@gmail.com",
+  "student_phone": "3185698754"
+},
+{
+  "student_id": 30005,
+  "student_full_name": "Julia Vargas",
+  "faculty": "Ciencias",
+  "available_credits": 17,
+  "enrolled_credits": 3,
+  "student_email": null,
+  "student_phone": "3125678227"
+},
+{
+  "student_id": 30006,
+  "student_full_name": "Elena Sánchez",
+  "faculty": "Ciencias",
+  "available_credits": 22,
+  "enrolled_credits": 6,
+  "student_email": "sanchelena@hotmail.com\n",
+  "student_phone": "3105279064"
+},
+{
+  "student_id": 30009,
+  "student_full_name": "Jorge Ramírez",
+  "faculty": "Ingeniería",
+  "available_credits": 15,
+  "enrolled_credits": 6,
+  "student_email": "Jorgeram@outlook.com\n",
+  "student_phone": null
+},
+{
+  "student_id": 30010,
+  "student_full_name": "Sofía Morales",
+  "faculty": "Ciencias",
+  "available_credits": 16,
+  "enrolled_credits": 3,
+  "student_email": null,
+  "student_phone": "3196575859"
+}
+]

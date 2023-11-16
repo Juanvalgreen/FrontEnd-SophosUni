@@ -1,0 +1,23 @@
+<div class="title">
+  <h1>{{currentList}}</h1>
+</div>
+<div class="main">
+
+
+  <div class="expanded-side">
+
+    <app-students-list *ngIf="currentList == 'Estudiantes' "    ></app-students-list>
+    <app-courses-list *ngIf="currentList == 'Cursos' "    ></app-courses-list>
+    <app-teachers-list *ngIf="currentList == 'Profesores' "    ></app-teachers-list>
+
+  </div>
+
+  <div class="collapsed-side">
+
+    <app-create-student *ngIf="currentList == 'Estudiantes' "    ></app-create-student>
+    <app-create-course *ngIf="currentList == 'Cursos' "    ></app-create-course>
+    <app-create-teacher *ngIf="currentList == 'Profesores' "    ></app-create-teacher>
+  </div>
+
+
+</div>

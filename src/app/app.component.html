@@ -1,0 +1,10 @@
+
+<app-navbar *ngIf="!isLoginPage"></app-navbar>
+<app-user-info-modal *ngIf="showInfoUserModal"></app-user-info-modal>
+<app-menu-modal *ngIf="showMenuModal"></app-menu-modal>
+<app-delete-modal *ngIf="showDeleteModal"></app-delete-modal>
+<app-edit-modal *ngIf="showEditModal"></app-edit-modal>
+<app-add-enroll-modal *ngIf="showNewEnrollModal"></app-add-enroll-modal>
+<app-delete-enroll-modal *ngIf="showDeleteEnrollModal"></app-delete-enroll-modal>
+
+<router-outlet></router-outlet>

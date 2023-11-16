@@ -1,0 +1,80 @@
+[
+  {
+      "prerequisite_id": 40003,
+      "course_id": 70003,
+      "course_details": {
+          "course_id": 70003,
+          "teacher_details": {
+              "teacher_id": 50002,
+              "teacher_full_name": "Antonio López",
+              "max_degree": "Doctorado",
+              "experience_years": 8
+          },
+          "course_name": "Inglés",
+          "amount_credits": 1,
+          "available_places": 40,
+          "student_monitor_details": {
+              "student_id": 30004,
+              "student_full_name": "Laura Fernández",
+              "faculty": "Ingeniería",
+              "available_credits": 14,
+              "enrolled_credits": 1,
+              "student_email": "lausof12fer@hotmail.com\n",
+              "student_phone": "3132562529"
+          }
+      },
+      "prerequisite_course_id": 70005,
+      "course_prerequisite_details": {
+          "course_id": 70005,
+          "teacher_details": {
+              "teacher_id": 50006,
+              "teacher_full_name": "Victor Hurtado",
+              "max_degree": "Doctorado",
+              "experience_years": 9
+          },
+          "course_name": "Comunicación",
+          "amount_credits": 2,
+          "available_places": 40,
+          "student_monitor_details": null
+      }
+  },
+  {
+    "prerequisite_id": 40003,
+    "course_id": 70003,
+    "course_details": {
+        "course_id": 70003,
+        "teacher_details": {
+            "teacher_id": 50002,
+            "teacher_full_name": "Antonio López",
+            "max_degree": "Doctorado",
+            "experience_years": 8
+        },
+        "course_name": "Inglés",
+        "amount_credits": 1,
+        "available_places": 40,
+        "student_monitor_details": {
+            "student_id": 30004,
+            "student_full_name": "Laura Fernández",
+            "faculty": "Ingeniería",
+            "available_credits": 14,
+            "enrolled_credits": 1,
+            "student_email": "lausof12fer@hotmail.com\n",
+            "student_phone": "3132562529"
+        }
+    },
+    "prerequisite_course_id": 70005,
+    "course_prerequisite_details": {
+        "course_id": 70005,
+        "teacher_details": {
+            "teacher_id": 50006,
+            "teacher_full_name": "Victor Hurtado",
+            "max_degree": "Doctorado",
+            "experience_years": 9
+        },
+        "course_name": "Comunicación",
+        "amount_credits": 2,
+        "available_places": 40,
+        "student_monitor_details": null
+    }
+  }
+]

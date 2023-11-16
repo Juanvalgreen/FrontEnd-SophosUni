@@ -1,0 +1,66 @@
+@use '../../_base.sass'
+
+
+.main-wrapper
+  @include base.main-wraper-component
+  overflow-y: scroll
+  height: 100%
+
+  .header
+    padding-top: 1.2rem
+    position: sticky
+    top: 0
+    background-color: base.$secondary-color
+    display: flex
+    justify-content: space-between
+    z-index: 2
+    h1
+      color: base.$primary-color
+      font-size: 2rem
+      font-weight: 500
+      margin: 0
+
+    .title
+      transition: 0.3s
+      cursor: pointer
+
+      &:hover
+        transform: scale(1.1)
+
+    .search-bar-container
+      display: flex
+      // justify-content: center
+      // align-items: center
+      // position: relative
+
+      .search-bar-input
+        padding: 0 1.3rem
+        width: 22rem
+        height: 2.2rem
+        border-radius: 3rem
+        border: solid 1px base.$primary-color
+        background-color: base.$text-area-color
+        font-size: 1rem
+        font-family: base.$font-stack
+
+      .search-bar-icon
+        width: 1.4rem
+        position: absolute
+        right: 0.9rem
+        top: 1.5rem
+
+  .error_message
+      color: red
+      margin: 0
+      font-size: 1rem
+
+
+  .table-list
+    @include base.table-list
+
+    #clickableName
+      cursor: pointer
+      transition: 0.3s
+      &:hover
+        transform: scale(1.1)
+

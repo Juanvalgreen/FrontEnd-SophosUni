@@ -1,0 +1,74 @@
+[
+  {
+      "enrollment_id": 10022,
+      "student_id": 30014,
+      "student_details": {
+          "student_id": 30014,
+          "student_full_name": "Camilo Echeverry",
+          "faculty": "Ingeniería",
+          "available_credits": 12,
+          "enrolled_credits": 1,
+          "student_email": null,
+          "student_phone": null
+      },
+      "course_id": 70003,
+      "course_details": {
+          "course_id": 70003,
+          "teacher_details": {
+              "teacher_id": 50002,
+              "teacher_full_name": "Antonio López",
+              "max_degree": "Doctorado",
+              "experience_years": 8
+          },
+          "course_name": "Inglés",
+          "amount_credits": 1,
+          "available_places": 40,
+          "student_monitor_details": {
+              "student_id": 30004,
+              "student_full_name": "Laura Fernández",
+              "faculty": "Ingeniería",
+              "available_credits": 14,
+              "enrolled_credits": 1,
+              "student_email": "lausof12fer@hotmail.com\n",
+              "student_phone": "3132562529"
+          }
+      },
+      "enrollment_date": "2023-09-12T05:00:00.000+00:00"
+  },
+  {
+    "enrollment_id": 10022,
+    "student_id": 30014,
+    "student_details": {
+        "student_id": 30014,
+        "student_full_name": "Camilo Echeverry",
+        "faculty": "Ingeniería",
+        "available_credits": 12,
+        "enrolled_credits": 1,
+        "student_email": null,
+        "student_phone": null
+    },
+    "course_id": 70003,
+    "course_details": {
+        "course_id": 70003,
+        "teacher_details": {
+            "teacher_id": 50002,
+            "teacher_full_name": "Antonio López",
+            "max_degree": "Doctorado",
+            "experience_years": 8
+        },
+        "course_name": "Inglés",
+        "amount_credits": 1,
+        "available_places": 40,
+        "student_monitor_details": {
+            "student_id": 30004,
+            "student_full_name": "Laura Fernández",
+            "faculty": "Ingeniería",
+            "available_credits": 14,
+            "enrolled_credits": 1,
+            "student_email": "lausof12fer@hotmail.com\n",
+            "student_phone": "3132562529"
+        }
+    },
+    "enrollment_date": "2023-09-12T05:00:00.000+00:00"
+  }
+]

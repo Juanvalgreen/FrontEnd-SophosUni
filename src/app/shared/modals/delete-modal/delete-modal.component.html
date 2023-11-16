@@ -1,0 +1,20 @@
+<div class="modal-main">
+  <div class="modal-container">
+
+    <div class="modal-header">
+      <h1>¿Deseas eliminarlo?</h1>
+      <img src="../../../../assets/x 1.svg" alt="close icon" (click)="closeModal()"/>
+    </div>
+    <div class="modal-info">
+      <p>Esta acción es irreversible y eliminara por completo a {{currentDetailName}}</p>
+      <app-loader *ngIf="loading"></app-loader>
+      <div class="buttons-container"  *ngIf="!loading">
+        <button (click)="closeModal()">Cancelar</button>
+        <button id="delete-button" (click)="confirmDelete()">Eliminar</button>
+
+      </div>
+    </div>
+  </div>
+
+
+</div>

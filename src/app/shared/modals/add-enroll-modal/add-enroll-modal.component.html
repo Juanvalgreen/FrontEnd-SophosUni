@@ -1,0 +1,42 @@
+<div class="modal-main">
+  <div class="modal-container">
+
+    <div class="modal-header">
+      <h1>Generar nueva matricula</h1>
+      <img src="../../../../assets/x 1.svg" alt="close icon" (click)="closeModal()"/>
+    </div>
+    <div class="modal-info">
+      <p>Selecciona curso y estudiante para generar la matricula</p>
+
+      <form class="edit_form" [formGroup]="newEnrollForm" >
+
+          <div class="input-group">
+            <label> Curso</label>
+            <select formControlName="course_id">
+              <option value="null">Null</option>
+              <option *ngFor="let course of allCourses" value={{course.course_id}}> {{course.course_name}}</option>
+            </select>
+          </div>
+          <div class="input-group">
+            <label> Estudiante</label>
+            <select formControlName="student_id">
+              <option value="null"> Null</option>
+              <option *ngFor="let student of allStudents" value={{student.student_id}}> {{student.student_full_name}}</option>
+            </select>
+          </div>
+
+      </form>
+      <p class="error_message" *ngIf="!isAvailable" >Aseguresé de que el estudiante cumpla con los requerimientos para matricular esta materia</p>
+
+      <app-loader *ngIf="loading"></app-loader>
+
+      <div class="buttons-container" *ngIf="!loading">
+        <button (click)="closeModal()">Cancelar</button>
+        <button id="delete-button" (click)="addNewEnroll()">Generar</button>
+
+      </div>
+    </div>
+  </div>
+
+
+</div>

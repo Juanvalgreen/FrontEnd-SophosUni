@@ -1,0 +1,114 @@
+<div class="modal-main">
+  <div class="modal-container">
+
+    <div class="modal-header">
+      <h1>Editar {{currentDetailName}}</h1>
+      <img src="../../../../assets/x 1.svg" alt="close icon" (click)="closeModal()"/>
+    </div>
+    <div class="modal-info">
+      <!-- when student -->
+      <form class="edit_form" [formGroup]="editStudentForm" *ngIf="dataDetail.typeData == 'Estudiante'">
+        <div class="column-form">
+
+          <div class="input-group">
+            <label>Código</label>
+            <input formControlName="student_id" type="text" class="input_name">
+          </div>
+          <div class="input-group">
+            <label> Facultad </label>
+            <input formControlName="faculty"  type="text" class="input_faculty">
+          </div>
+          <div class="input-group">
+            <label>Creditos disponibles</label>
+            <input formControlName="available_credits"  type="number" class="input_credits" min="0">
+          </div>
+        </div>
+        <div class="column-form">
+          <div class="input-group">
+            <label>Nombre</label>
+            <input formControlName="student_full_name" type="text" class="input_name">
+          </div>
+          <div class="input-group">
+            <label>Email</label>
+            <input formControlName="student_email"  type="email" class="input_email">
+          </div>
+          <div class="input-group">
+            <label> Teléfono</label>
+            <input formControlName="student_phone"  type="text" class="input_phone">
+          </div>
+
+        </div>
+      </form>
+      <!-- when teacher -->
+      <form class="edit_form" [formGroup]="editTeacherForm" *ngIf="dataDetail.typeData == 'Profesor'">
+        <div class="column-form">
+          <div class="input-group">
+            <label>Código</label>
+            <input formControlName="teacher_id" type="text" >
+          </div>
+          <div class="input-group">
+            <label>Nombre</label>
+            <input formControlName="teacher_full_name" type="text" >
+          </div>
+          <div class="input-group">
+            <label>Grado educación</label>
+            <input formControlName="max_degree"  type="text" >
+          </div>
+        </div>
+        <div class="column-form">
+          <div class="input-group">
+            <label>Años experiencia</label>
+            <input formControlName="experience_years"  type="number" min="0">
+          </div>
+        </div>
+      </form>
+      <!-- when course -->
+      <form class="edit_form" [formGroup]="editCourseForm" *ngIf="dataDetail.typeData == 'Curso'">
+        <div class="column-form">
+          <div class="input-group">
+            <label>Código</label>
+            <input formControlName="course_id" type="text" >
+          </div>
+          <div class="input-group">
+            <label>Nombre</label>
+            <input formControlName="course_name" type="text" >
+          </div>
+          <div class="input-group">
+            <label>Nº creditos</label>
+            <input formControlName="amount_credits"  type="number" min="0">
+          </div>
+
+        </div>
+        <div class="column-form">
+          <div class="input-group">
+            <label> Cupos libres </label>
+            <input formControlName="available_places"  type="number" min="0">
+          </div>
+          <div class="input-group">
+            <label> Maestro</label>
+            <select formControlName="teacher_id">
+              <option value="null">Null</option>
+              <option *ngFor="let teacher of allTeachers" value={{teacher.teacher_id}}> {{teacher.teacher_full_name}}</option>
+            </select>
+          </div>
+          <div class="input-group">
+            <label> Monitor</label>
+            <select formControlName="course_student_monitor_id">
+              <option value="null"> Null</option>
+              <option *ngFor="let student of allStudents" value={{student.student_id}}> {{student.student_full_name}}</option>
+            </select>
+          </div>
+
+        </div>
+      </form>
+      <app-loader *ngIf="loading"></app-loader>
+      <div class="buttons-container" *ngIf="!loading">
+        <button (click)="closeModal()">Cancelar</button>
+        <button id="delete-button" (click)="confirmEdit()">Editar</button>
+
+      </div>
+    </div>
+  </div>
+
+
+</div>

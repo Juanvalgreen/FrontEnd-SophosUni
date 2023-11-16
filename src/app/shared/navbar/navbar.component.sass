@@ -1,0 +1,67 @@
+@use '../../_base.sass'
+
+
+nav
+  margin: 20px
+  display: flex
+  align-items: center
+  justify-content: space-between
+
+  .logo
+    width: 9%
+    height: 100%
+    cursor: pointer
+
+
+
+  .logo-user
+    width: 2.5rem
+    margin-right: 0.2rem
+    cursor: pointer
+
+    transition: 0.3s
+
+    &:hover
+      transform: scale(1.1)
+
+.nav-icon-8
+  width: 35px
+  height: 2rem
+  margin: 0 1rem
+  position: relative
+  cursor: pointer
+  display: inline-block
+
+  span
+    background-color: base.$primary-color
+    position: absolute
+    border-radius: 2px
+    transition: 0.3s cubic-bezier(0.8, 0.5, 0.2, 1.4)
+    width: 100%
+    height: 4px
+
+    &:nth-child(1)
+      top: 0px
+      left: 0px
+
+    &:nth-child(2)
+      top: 13px
+      left: 0px
+
+    &:nth-child(3)
+      bottom: 0px
+      left: 0px
+
+  &:not(.open):hover span
+    &:nth-child(1)
+      transform: scaleX(0.8)
+
+    &:nth-child(2)
+      transform: scaleX(0.5)
+
+    &:nth-child(3)
+      transform: scaleX(0.8)
+
+  &.open span
+    &:nth-child(1), &:nth-child(2), &:nth-child(3)
+      top: 13px

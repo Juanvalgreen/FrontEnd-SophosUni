@@ -1,0 +1,16 @@
+<nav>
+
+  <img src="../../../assets/Logo.svg" class="logo" (click)="redirectToHome()">
+
+  <div>
+
+    <img src="../../../assets/LogoUser.svg" class="logo-user" (click)="toggleUserModal()" *ngIf="isNotFoundPage">
+    <div class="icon nav-icon-8" (click)="toggleMenuModal()" *ngIf="isNotFoundPage">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+  </div>
+
+</nav>

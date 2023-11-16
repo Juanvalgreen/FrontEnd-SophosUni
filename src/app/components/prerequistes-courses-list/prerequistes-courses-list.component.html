@@ -1,0 +1,35 @@
+<div class="main-wrapper">
+  <div class="header">
+    <h1 class="title" > Cursos prerequisto</h1>
+  </div>
+  <p class="empty_courses" *ngIf="(prerequisiteCourses.length == 0) && !isError">Este curso no tiene prerequisitos</p>
+
+  <p *ngIf="isError" class="error_message">Ha ocurrido un error al traer los datos, intentelo nuevamente más tarde</p>
+
+  <table class="table-list" *ngIf="!(prerequisiteCourses.length == 0) && !isError">
+    <tr >
+      <th>
+        Codigo
+      </th>
+      <th>
+        Nombre
+      </th>
+      <th>
+        Profesor
+      </th>
+    </tr>
+    <tr *ngFor="let course of prerequisiteCourses">
+      <td>
+        {{course.course_prerequisite_details.course_id}}
+      </td>
+      <td>
+        {{course.course_prerequisite_details.course_name}}
+      </td>
+      <td >
+        {{course.course_prerequisite_details.teacher_details == null ? 'Null' : course.course_prerequisite_details.teacher_details.teacher_full_name}}
+      </td>
+
+    </tr>
+  </table>
+
+</div>

@@ -1,0 +1,154 @@
+[
+  {
+    "course_id": 70002,
+    "teacher_details": {
+        "teacher_id": 50001,
+        "teacher_full_name": "Elisa González",
+        "max_degree": "Maestría",
+        "experience_years": 5
+    },
+    "course_name": "Física",
+    "amount_credits": 3,
+    "available_places": 20,
+    "student_monitor_details": {
+        "student_id": 30001,
+        "student_full_name": "Carlos López",
+        "faculty": "Ciencias",
+        "available_credits": 12,
+        "enrolled_credits": 4,
+        "student_email": "carpez36@outlook.com",
+        "student_phone": null
+    }
+},
+{
+    "course_id": 70003,
+    "teacher_details": {
+        "teacher_id": 50002,
+        "teacher_full_name": "Antonio López",
+        "max_degree": "Doctorado",
+        "experience_years": 8
+    },
+    "course_name": "Inglés",
+    "amount_credits": 1,
+    "available_places": 40,
+    "student_monitor_details": {
+        "student_id": 30004,
+        "student_full_name": "Laura Fernández",
+        "faculty": "Ingeniería",
+        "available_credits": 14,
+        "enrolled_credits": 1,
+        "student_email": "lausof12fer@hotmail.com\n",
+        "student_phone": "3132562529"
+    }
+},
+{
+    "course_id": 70004,
+    "teacher_details": {
+        "teacher_id": 50004,
+        "teacher_full_name": "Juan Ramírez",
+        "max_degree": "Doctorado",
+        "experience_years": 12
+    },
+    "course_name": "Logica",
+    "amount_credits": 3,
+    "available_places": 20,
+    "student_monitor_details": {
+        "student_id": 30008,
+        "student_full_name": "Marta García",
+        "faculty": "Ingeniería",
+        "available_credits": 12,
+        "enrolled_credits": 3,
+        "student_email": null,
+        "student_phone": "3152455831"
+    }
+},
+{
+    "course_id": 70005,
+    "teacher_details": {
+        "teacher_id": 50006,
+        "teacher_full_name": "Victor Hurtado",
+        "max_degree": "Doctorado",
+        "experience_years": 9
+    },
+    "course_name": "Comunicación",
+    "amount_credits": 2,
+    "available_places": 40,
+    "student_monitor_details": null
+},
+{
+    "course_id": 70006,
+    "teacher_details": {
+        "teacher_id": 50005,
+        "teacher_full_name": "Maribel Amu",
+        "max_degree": "Maestría",
+        "experience_years": 7
+    },
+    "course_name": "Programación II",
+    "amount_credits": 3,
+    "available_places": 30,
+    "student_monitor_details": {
+        "student_id": 30013,
+        "student_full_name": "Pedro Díaz",
+        "faculty": "Ingeniería",
+        "available_credits": 19,
+        "enrolled_credits": 2,
+        "student_email": "pedrodiaz345@gmail.com\n",
+        "student_phone": "3126544798"
+    }
+},
+{
+    "course_id": 70007,
+    "teacher_details": {
+        "teacher_id": 50003,
+        "teacher_full_name": "Beatriz Sánchez",
+        "max_degree": "Maestría",
+        "experience_years": 6
+    },
+    "course_name": "Programación",
+    "amount_credits": 3,
+    "available_places": 35,
+    "student_monitor_details": {
+        "student_id": 30012,
+        "student_full_name": "Carmen Castro",
+        "faculty": "Ingeniería",
+        "available_credits": 17,
+        "enrolled_credits": 6,
+        "student_email": "carmencitafiufiu@hotmail.com\n",
+        "student_phone": null
+    }
+},
+{
+    "course_id": 70001,
+    "teacher_details": {
+        "teacher_id": 50000,
+        "teacher_full_name": "Alberto Martínez",
+        "max_degree": "Doctorado",
+        "experience_years": 10
+    },
+    "course_name": "Historia",
+    "amount_credits": 2,
+    "available_places": 25,
+    "student_monitor_details": null
+},
+{
+    "course_id": 70000,
+    "teacher_details": {
+        "teacher_id": 50003,
+        "teacher_full_name": "Beatriz Sánchez",
+        "max_degree": "Maestría",
+        "experience_years": 6
+    },
+    "course_name": "Matemáticas",
+    "amount_credits": 3,
+    "available_places": 30,
+    "student_monitor_details": {
+        "student_id": 30003,
+        "student_full_name": "Javier Martínez",
+        "faculty": "Ingeniería",
+        "available_credits": 15,
+        "enrolled_credits": 3,
+        "student_email": "nezvija28@gmail.com",
+        "student_phone": "3007582121"
+    }
+}
+]

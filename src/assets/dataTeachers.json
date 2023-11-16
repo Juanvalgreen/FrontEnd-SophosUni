@@ -1,0 +1,45 @@
+
+[
+  {
+    "teacher_id": 50000,
+    "teacher_full_name": "Alberto Martínez",
+    "max_degree": "Doctorado",
+    "experience_years": 10
+},
+{
+    "teacher_id": 50001,
+    "teacher_full_name": "Elisa González",
+    "max_degree": "Maestría",
+    "experience_years": 5
+},
+{
+    "teacher_id": 50002,
+    "teacher_full_name": "Antonio López",
+    "max_degree": "Doctorado",
+    "experience_years": 8
+},
+{
+    "teacher_id": 50003,
+    "teacher_full_name": "Beatriz Sánchez",
+    "max_degree": "Maestría",
+    "experience_years": 6
+},
+{
+    "teacher_id": 50004,
+    "teacher_full_name": "Juan Ramírez",
+    "max_degree": "Doctorado",
+    "experience_years": 12
+},
+{
+    "teacher_id": 50005,
+    "teacher_full_name": "Maribel Amu",
+    "max_degree": "Maestría",
+    "experience_years": 7
+},
+{
+    "teacher_id": 50006,
+    "teacher_full_name": "Victor Hurtado",
+    "max_degree": "Doctorado",
+    "experience_years": 9
+}
+]

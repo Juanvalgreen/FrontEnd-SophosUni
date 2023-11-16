@@ -1,0 +1,45 @@
+<div class="main-wrapper">
+  <div class="header">
+    <h1 class="title" (click)="redirectToList()" *ngIf="!isTeachersPage">Profesores</h1>
+    <h1 *ngIf="isTeachersPage" >Listado</h1>
+    <form class="search-bar-container" *ngIf="isTeachersPage" [formGroup]="searchBar">
+      <img class="search-bar-icon" src="../../../assets/lupa.svg">
+      <input formControlName="search" type="text" class="search-bar-input" placeholder="Busca el nombre del profesor">
+    </form>
+    <app-loader *ngIf="loading"></app-loader>
+  </div>
+  <p *ngIf="isError" class="error_message">Ha ocurrido un error al traer los datos, intentelo nuevamente más tarde</p>
+  <table class="table-list" *ngIf="!isError && !loading">
+    <tr >
+      <th>
+        Codigo
+        <img src="../../../assets/ordenar 5.svg" alt="sort logo" (click)="sortStudents('teacher_id')">
+      </th>
+      <th>
+        Nombre
+        <img src="../../../assets/ordenar 5.svg" alt="sort logo" (click)="sortStudents('teacher_full_name')">
+      </th>
+      <th *ngIf="isTeachersPage">
+        Grado Educación
+      </th>
+      <th *ngIf="isTeachersPage">
+        Experiencia
+      </th>
+    </tr>
+    <tr *ngFor="let teacher of currentTeachersList">
+      <td>
+        {{teacher.teacher_id}}
+      </td>
+      <td (click)="asignDetailData(teacher)" id="clickableName">
+        {{teacher.teacher_full_name}}
+      </td>
+      <td *ngIf="isTeachersPage">
+        {{teacher.max_degree}}
+      </td>
+      <td *ngIf="isTeachersPage">
+        {{teacher.experience_years}} años
+      </td>
+    </tr>
+  </table>
+
+</div>

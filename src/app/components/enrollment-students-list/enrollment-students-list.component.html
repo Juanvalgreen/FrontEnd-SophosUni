@@ -1,0 +1,35 @@
+<div class="main-wrapper">
+  <div class="header">
+    <h1 class="title" > Estudiantes matriculados</h1>
+    <img src="../../../assets/plus.svg" alt="add new enroll icon" (click)="openAddNewEnrollModal()">
+  </div>
+  <p class="empty_courses" *ngIf="(enrollmentStudents.length == 0)">Este curso aún no tiene estudiantes matriculados</p>
+  <app-loader *ngIf="loading"></app-loader>
+  <table class="table-list" *ngIf="!(enrollmentStudents.length == 0) && !loading">
+    <tr >
+      <th>
+        Codigo
+      </th>
+      <th>
+        Nombre
+      </th>
+      <th>
+        Facultad
+      </th>
+    </tr>
+    <tr *ngFor="let student of enrollmentStudents">
+      <td>
+        {{student.student_id}}
+      </td>
+      <td>
+        {{student.student_details.student_full_name}}
+      </td>
+      <td >
+        {{student.student_details.faculty}}
+      </td>
+
+      <img src="../../../assets/borrar 1.svg" alt="delete enroll logo" class="delete-enroll" (click)="openDeleteEnrollModal(student)">
+    </tr>
+  </table>
+
+</div>

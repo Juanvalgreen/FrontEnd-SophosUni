@@ -1,0 +1,84 @@
+$primary-color: #4D0FFF
+$text-area-color: #CBB8FF
+$third-color: #8A60FF
+$text-color: #3F3F3F
+$secondary-color: #D9D9D9
+$dark-gray: #787878
+$warning-color: #BD02FF
+
+$font-stack: Poppins
+
+@mixin main-wraper-component
+  padding: 0 1.2rem
+  display: flex
+  flex-direction: column
+  justify-content: left
+  background-color: $secondary-color
+  border-radius: 14px
+  font-family: $font-stack
+
+@mixin button
+  margin: 3rem 0
+  height: 2.2rem
+  border-radius: 3rem
+  border: none
+  color: $text-area-color
+  font-size: 1rem
+  font-family: $font-stack
+
+@mixin input
+  margin: 1rem 0
+  padding: 0 1.3rem
+  width: 80%
+  height: 2.2rem
+  border-radius: 3rem
+  border: solid 1px $primary-color
+  background-color: $text-area-color
+  font-size: 1rem
+  font-family: $font-stack
+
+@mixin table-list
+  text-align: left
+  border-spacing: 1.8rem
+
+  tr
+    margin: 3rem
+    font-size: 1rem
+    td
+      color: $primary-color
+      font-weight: 200
+
+    th
+      color: $text-color
+      font-size: 1.4rem
+      font-weight: 300
+      position: relative
+
+      img
+        position: absolute
+        right: -10
+        opacity: 0
+        cursor: pointer
+
+        transition: 0.3s
+
+      &:hover
+        img
+          opacity: 1
+    &:hover
+      .delete-enroll
+        opacity: 1
+
+@mixin modal-main
+  height: 100vh
+  width: 100%
+  display: flex
+  font-family: $font-stack
+  top: 0
+  right: 0
+  position: fixed
+  background: rgb(0,0 ,0,0.75 )
+  overflow-y: auto
+  z-index: 9999
+
+

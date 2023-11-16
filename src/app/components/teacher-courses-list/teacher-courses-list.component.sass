@@ -1,0 +1,38 @@
+@use '../../_base.sass'
+
+
+.main-wrapper
+  @include base.main-wraper-component
+  overflow-y: scroll
+  height: 100%
+
+  .header
+    padding-top: 1.2rem
+    position: sticky
+    top: 0
+    background-color: base.$secondary-color
+    display: flex
+    h1
+      color: base.$primary-color
+      font-size: 2rem
+      font-weight: 500
+      margin: 0
+
+    .title
+      cursor: pointer
+      transition: 0.3s
+
+      &:hover
+        transform: scale(1.1)
+
+  .error_message
+      color: red
+      margin: 2rem 0
+      font-size: 1rem
+
+
+
+
+  .table-list
+    @include base.table-list
+

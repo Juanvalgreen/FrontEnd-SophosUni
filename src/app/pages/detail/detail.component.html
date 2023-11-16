@@ -1,0 +1,107 @@
+<main>
+  <div class="info-side">
+    <p>Detalles de {{currentDetailObject.typeData}}
+    </p>
+    <h1 *ngIf="currentDetailObject.typeData === 'Curso'" >{{currentDetailObject.currentData.course_name}}</h1>
+    <h1 *ngIf="currentDetailObject.typeData === 'Estudiante'">{{currentDetailObject.currentData.student_full_name}}</h1>
+    <h1 *ngIf="currentDetailObject.typeData === 'Profesor'">{{currentDetailObject.currentData.teacher_full_name}}</h1>
+
+    <div class="info">
+
+      <!-- when student -->
+      <table *ngIf="currentDetailObject.typeData === 'Estudiante'">
+        <tr>
+          <th>Código</th>
+          <th>Mail</th>
+        </tr>
+        <tr>
+          <td>{{currentDetailObject.currentData.student_id}}</td>
+          <td>{{currentDetailObject.currentData.student_email == null ? 'Null' : currentDetailObject.currentData.student_email}}</td>
+        </tr>
+        <tr>
+          <th>Numero Teléfono</th>
+          <th>Facultad</th>
+        </tr>
+        <tr>
+          <td>{{currentDetailObject.currentData.student_phone == null ? 'Null' : currentDetailObject.currentData.student_phone}}</td>
+          <td>{{'Ingenieria'}}</td>
+        </tr>
+        <tr>
+          <th>Creditos</th>
+          <th>Creditos matriculados</th>
+        </tr>
+        <tr>
+          <td>{{currentDetailObject.currentData.available_credits}}</td>
+          <td>{{currentDetailObject.currentData.enrolled_credits}}</td>
+        </tr>
+      </table>
+      <!-- when course -->
+      <table *ngIf="currentDetailObject.typeData === 'Curso'">
+        <tr>
+          <th>Código</th>
+          <th>profesor</th>
+        </tr>
+        <tr>
+          <td>{{currentDetailObject.currentData.course_id}}</td>
+          <td>{{currentDetailObject.currentData.teacher_details == null ? 'Null' : currentDetailObject.currentData.teacher_details.teacher_full_name}}</td>
+        </tr>
+        <tr>
+          <th>Creditos</th>
+          <th>Monitor</th>
+        </tr>
+        <tr>
+          <td>{{currentDetailObject.currentData.amount_credits}}</td>
+          <td>{{currentDetailObject.currentData.student_monitor_details == null ? 'Null': currentDetailObject.currentData.student_monitor_details.student_full_name }}<td>
+        </tr>
+        <tr>
+          <th>Cupos Disponibles</th>
+          <th>Estudiantes matriculados</th>
+        </tr>
+        <tr>
+          <td>{{currentDetailObject.currentData.available_places}}</td>
+          <td>{{amountCurrentEnrolls}}</td>
+        </tr>
+      </table>
+      <!-- when teacher -->
+      <table *ngIf="currentDetailObject.typeData === 'Profesor'">
+        <tr>
+          <th>Código</th>
+          <th>Años de experiencia</th>
+        </tr>
+        <tr>
+          <td>{{currentDetailObject.currentData.teacher_id}}</td>
+          <td>{{currentDetailObject.currentData.experience_years}}</td>
+        </tr>
+        <tr>
+          <th>Máximo grado</th>
+
+        </tr>
+        <tr>
+          <td>{{currentDetailObject.currentData.max_degree}}</td>
+
+        </tr>
+
+      </table>
+      <div class="operations-buttons">
+        <button (click)="openEditModal()">Editar</button>
+        <button id="delete-button" (click)="openDeleteModal()">Eliminar</button>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="relations-side">
+    <!-- when student -->
+    <app-enrollment-courses-list *ngIf="currentDetailObject.typeData === 'Estudiante'"></app-enrollment-courses-list>
+    <app-approved-courses-list *ngIf="currentDetailObject.typeData === 'Estudiante'"></app-approved-courses-list>
+
+    <!-- when course-->
+    <app-enrollment-students-list *ngIf="currentDetailObject.typeData === 'Curso'"></app-enrollment-students-list>
+    <app-prerequistes-courses-list *ngIf="currentDetailObject.typeData === 'Curso'"></app-prerequistes-courses-list>
+
+    <!-- when teacher -->
+    <app-teacher-courses-list *ngIf="currentDetailObject.typeData === 'Profesor'"></app-teacher-courses-list>
+
+  </div>
+
+</main>

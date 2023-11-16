@@ -1,0 +1,56 @@
+@use '../../_base'
+
+
+main
+  display: flex
+  font-family: base.$font-stack
+  height: 48rem
+
+
+  .info-side
+    width: 40%
+    height: 100%
+    margin: 0 2rem
+
+    p
+      margin-bottom: 0
+      color: base.$primary-color
+      font-weight: 300
+
+    h1
+      margin: 0
+      color: base.$primary-color
+      font-size: 3rem
+
+    table
+      @include base.table-list
+
+      width: 100%
+
+
+    .operations-buttons
+      display: flex
+
+
+      button
+        @include base.button
+        margin: 2rem
+        padding: 1rem
+        cursor: pointer
+        background-color: base.$primary-color
+        display: flex
+        align-items: center
+        transition: 0.3s
+
+        &:hover
+          transform: scale(1.1)
+
+      #delete-button
+        background-color: base.$warning-color
+        color: white
+
+
+
+
+  .relations-side
+    width: 60%
